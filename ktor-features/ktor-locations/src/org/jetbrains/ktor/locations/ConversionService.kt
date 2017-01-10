@@ -63,7 +63,7 @@ public open class DefaultConversionService : ConversionService {
         }
 
         if (values.size != 1) {
-            throw InconsistentRoutingException("There are multiply values in request when trying to construct single value $type")
+            throw InconsistentRoutingException("The request has multiple values where a single $type value is expected")
         }
 
         return convert(values.single(), type)
